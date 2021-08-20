@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'fs-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<router-outlet></router-outlet>'
 })
-export class AppComponent {
-  title = 'football-spotlight';
-}
+export class AppComponent { }

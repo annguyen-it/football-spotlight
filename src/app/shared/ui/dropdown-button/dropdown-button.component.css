@@ -1,0 +1,8 @@
+.button:hover+.dropdown {
+  @apply visible;
+  @apply scale-100 -translate-x-1/2;
+}
+
+ul {
+  column-count: 2;
+}

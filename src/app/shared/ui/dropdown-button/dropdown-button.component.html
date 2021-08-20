@@ -1,0 +1,39 @@
+<ng-container *ngIf="item.displayOnTablet">
+  <div
+    role="button"
+    class="button flex items-center w-full h-full
+    px-4 xl:px-6 align-text-middle"
+  >
+    {{ item.name }}
+    <span *ngIf="item.showDropdownItemsOnTablet && item.trailingIcon">
+      <i
+        [class]="item.trailingIcon"
+        class="ml-2 xl:ml-2.5"
+      ></i>
+    </span>
+  </div>
+  <div
+    class="dropdown absolute bottom-0 left-1/2 min-w-full invisible whitespace-nowrap 
+    px-6 py-4 bg-pinkPurple-light rounded-b-sm text-base-sm leading-9
+    transform scale-0 -translate-x-1/2 translate-y-full origin-top z-30 transition-all duration-100
+    hover:visible hover:scale-100 hover:-translate-x-1/2
+    before:absolute before:block before:left-1/2 before:-top-2 before:w-4 before:h-4
+    before:content-[''] before:bg-pinkPurple-light
+    before:transform before:-translate-x-1/2 before:rotate-45"
+    *ngIf="item.showDropdownItemsOnTablet"
+  >
+    <ul role="menu">
+      <li
+        class="relative block"
+        *ngFor="let navItem of item.navItems"
+      >
+        <a
+          class="leading-7 hover:underline"
+          role="button"
+        >
+          {{ navItem }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-container>

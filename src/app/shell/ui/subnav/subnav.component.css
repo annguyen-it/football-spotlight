@@ -1,0 +1,21 @@
+.sub-nav > ul > li {
+  @apply flex-shrink-0;
+}
+
+.sub-nav ul a,
+.sub-nav ul div {
+  @apply relative block py-4 px-5;
+}
+
+.sub-nav > ul > li > a::after {
+  background: linear-gradient(90deg, #963cff, #a64dae);
+  @apply absolute left-0 right-0 bottom-0 block h-0;
+  @apply content-[''] transition-height duration-200 ease-in-out;
+}
+.sub-nav > ul > li a:hover:after {
+  @apply h-1;
+}
+
+.more-dropdown li {
+  @apply hover:text-pinkPurple-light transition duration-200 ease-in-out;
+}

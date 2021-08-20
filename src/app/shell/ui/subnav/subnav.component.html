@@ -1,0 +1,38 @@
+<!-- Sub nav -->
+<nav
+  class="sub-nav pl-36 text-gray-500"
+  #subNavContainer
+>
+  <ul
+    class="relative flex text-base-sm"
+    #subNav
+  >
+    <li *ngFor="let item of subNavItems">
+      <a [href]="item.url">{{ item.name }}</a>
+    </li>
+
+    <!-- More button begin -->
+    <li
+      class="more absolute right-0"
+      #more
+    >
+      <div
+        role="button"
+        class="more-toggle hover:bg-gray-200"
+        (click)="toggleMoreDropdown($event)"
+      >
+        <span>
+          <i class="fas fa-ellipsis-v text-primary mr-1"></i>
+          More
+        </span>
+      </div>
+      <ul
+        class="more-dropdown hidden absolute top-full right-0 bg-gray-200"
+        #subNavDropdown
+      ></ul>
+    </li>
+    <!-- More button end -->
+
+  </ul>
+</nav>
+<!-- Sub nav -->

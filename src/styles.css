@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'PremiereSans';
+  src: url('assets/fonts/premiere-league/PremierLeagueW01-Bold.ttf') format('truetype'), 
+       url('assets/fonts/premiere-league/PremierLeagueW01-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PremiereSans';
+  src: url('assets/fonts/premiere-league/PremierLeagueW01-BoldItalic.ttf') format('truetype'), 
+       url('assets/fonts/premiere-league/PremierLeagueW01-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PremiereSans';
+  src: url('assets/fonts/premiere-league/PremierLeagueW01-LightIt.ttf') format('truetype'), 
+       url('assets/fonts/premiere-league/PremierLeagueW01-LightIt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PremiereSans';
+  src: url('assets/fonts/premiere-league/PremierLeagueW01-Regular.ttf') format('truetype'), 
+       url('assets/fonts/premiere-league/PremierLeagueW01-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  @apply selection:bg-pinkPurple-light selection:text-white;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'PremiereSans', Arial, Helvetica, sans-serif;
+}
